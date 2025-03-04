@@ -13,7 +13,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
-            background: #f0f2f5;
+            background: #3f91aa;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -21,13 +21,16 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            width:100%;
+            margin-left:10px;
+            background: linear-gradient(135deg, #217a4e 0%, #3782a5 100%);
             color: white;
             padding: 4rem 2rem;
             text-align: center;
             border-radius: 0 0 30px 30px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
+    
 
         /* Container */
         .container {
@@ -39,10 +42,11 @@
 
         /* Upload Section */
         .upload-section {
+            width: 50%;
             background: white;
             border-radius: 15px;
             padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             text-align: center;
         }
 
@@ -56,7 +60,7 @@
         }
 
         .drop-zone:hover {
-            border-color: #6366f1;
+            border-color: #13774d;
             background: #f8f9ff;
         }
 
@@ -69,7 +73,7 @@
         }
 
         .btn {
-            background: #6366f1;
+            background: #148d43;
             color: white;
             border: none;
             padding: 12px 30px;
@@ -144,11 +148,58 @@
 
         /* Footer */
         .footer {
-            background: #6366f1;
+            background:black;
             color: white;
             text-align: center;
             padding: 1rem;
             margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                padding: 3rem 1rem;
+            }
+
+            .container {
+                padding: 0 0.5rem;
+            }
+
+            .upload-section {
+                width: 80%;
+            }
+
+            .pricing-plan {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .pricing-plan .plan {
+                width: 80%;
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 2rem 1rem;
+            }
+
+            .upload-section {
+                width: 90%;
+            }
+
+            .drop-zone {
+                padding: 2rem;
+            }
+
+            .btn {
+                font-size: 14px;
+                padding: 10px 25px;
+            }
+
+            .pricing-plan .plan {
+                width: 100%;
+                margin-bottom: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -181,17 +232,23 @@
             <div class="plan">
                 <h3>Basic Plan</h3>
                 <p class="price">$0</p>
-                <p>Free access to background removal with limited uploads per month.</p>
+                <p><i>Note: Free plan expires after 3 days. Please upgrade for continued service.</i></p>
             </div>
             <div class="plan">
                 <h3>Pro Plan</h3>
                 <p class="price">$6.66</p>
                 <p>Unlimited background removal with enhanced AI quality.</p>
+                <a href="http://checkout.chapa.co/checkout/web/payment/PL-3chTX8wmWFvr" target="_blank">
+                    <button class="btn">Pay with Chapa</button>
+                </a>
             </div>
             <div class="plan">
                 <h3>Business Plan</h3>
                 <p class="price">$66.6</p>
                 <p>Ideal for businesses needing bulk background removal and priority support.</p>
+                <a href="http://checkout.chapa.co/checkout/web/payment/PL-3chTX8wmWFvr" target="_blank">
+                    <button class="btn">Pay with Chapa</button>
+                </a>
             </div>
         </div>
 
